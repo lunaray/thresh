@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bootstrap Navigation Bar</title>
+  <!-- Bootstrap CSS from CDN -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      padding-top: 20px;
+      background-color: #f8f9fa;
+    }
+    .navbar {
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    .dropdown-item {
+      padding: 0.5rem 1rem;
+    }
+    .dropdown-menu {
+      border: none;
+      box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    }
+    .submenu {
+      padding-left: 1rem;
+      border-left: 3px solid #0d6efd;
+      margin-left: 0.5rem;
+    }
+    .preview-container {
+      margin: 0 auto;
+      max-width: 1200px;
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    .navbar-brand {
+      font-weight: bold;
+    }
+    .nav-item {
+      margin: 0 2px;
+    }
+    .navbar-dark .navbar-nav .nav-link {
+      color: rgba(255,255,255,.85);
+    }
+    .navbar-dark .navbar-nav .nav-link:hover {
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <div class="preview-container">
+    <h2 class="text-center mb-4">Website Navigation Bar with Bootstrap</h2>
+    
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark rounded">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Threshold</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <!-- About Dropdown -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="aboutDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                About
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
+                <li><a class="dropdown-item" href="#">History & Affiliations</a></li>
+                <li><a class="dropdown-item" href="#">Facility & Gallery</a></li>
+                <li><a class="dropdown-item" href="#">FAQ (including Parking)</a></li>
+              </ul>
+            </li>
+            
+            <!-- Membership Dropdown -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="membershipDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Membership
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="membershipDropdown">
+                <li><a class="dropdown-item" href="#">Benefits & How to Join</a></li>
+                <li><a class="dropdown-item" href="#">Renewals</a></li>
+                <li><a class="dropdown-item" href="#">Resources (NCSF & Others)</a></li>
+              </ul>
+            </li>
+            
+            <!-- Events Dropdown -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="eventsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Events
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="eventsDropdown">
+                <li><a class="dropdown-item" href="#">Calendar</a></li>
+                <li><a class="dropdown-item fw-bold" href="#">Types</a></li>
+                <li>
+                  <div class="submenu">
+                    <a class="dropdown-item" href="#">Education</a>
+                    <a class="dropdown-item" href="#">Parties & Socials</a>
+                    <a class="dropdown-item" href="#">Support Groups</a>
+                  </div>
+                </li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item fw-bold" href="#">Rules & Policies</a></li>
+                <li>
+                  <div class="submenu">
+                    <a class="dropdown-item" href="#">Play Rules</a>
+                    <a class="dropdown-item" href="#">Covid-19 Policy</a>
+                  </div>
+                </li>
+              </ul>
+            </li>
+            
+            <!-- Get Involved Dropdown -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="involvedDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Get Involved
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="involvedDropdown">
+                <li><a class="dropdown-item fw-bold" href="#">Our Team</a></li>
+                <li>
+                  <div class="submenu">
+                    <a class="dropdown-item" href="#">Board of Directors</a>
+                    <a class="dropdown-item" href="#">Coordinators & Staff</a>
+                  </div>
+                </li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item fw-bold" href="#">Volunteer Opportunities</a></li>
+                <li>
+                  <div class="submenu">
+                    <a class="dropdown-item" href="#">Open Positions</a>
+                    <a class="dropdown-item" href="#">Facility Upkeep</a>
+                  </div>
+                </li>
+              </ul>
+            </li>
+            
+            <!-- Contact Dropdown -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="contactDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Contact
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="contactDropdown">
+                <li><a class="dropdown-item" href="#">Reservations</a></li>
+                <li><a class="dropdown-item" href="#">Feedback</a></li>
+                <li><a class="dropdown-item" href="#">Social Media</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+  <!-- Bootstrap JS Bundle with Popper -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .coordinators-container {
+            max-width: 1200px;
+            margin: 3rem auto;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+        }
+        
+        .coordinators-header {
+            text-align: center;
+            margin-bottom: 2.5rem;
+        }
+        
+        .coordinators-title {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+        
+        .coordinators-description {
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+        
+        .coordinators-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .coordinator-card {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+            overflow: hidden;
+            transition: transform 0.2s, box-shadow 0.2s;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+        
+        .coordinator-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.12);
+        }
+        
+        .coordinator-header {
+            padding: 15px;
+            background: linear-gradient(135deg, #444 0%, #222 100%);
+            color: white;
+            position: relative;
+        }
+        
+        .position-filled .coordinator-header {
+            background: linear-gradient(135deg, #3a7bd5 0%, #3a6073 100%);
+        }
+        
+        .position-name {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 0;
+            line-height: 1.3;
+        }
+        
+        .vacancy-badge {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: #ff6b6b;
+            color: white;
+            padding: 3px 10px;
+            border-radius: 12px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+        
+        .coordinator-body {
+            padding: 15px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .coordinator-info {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        
+        .coordinator-initial {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #f0f0f0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 10px;
+            font-weight: bold;
+            color: #555;
+            font-size: 1rem;
+        }
+        
+        .coordinator-details {
+            flex-grow: 1;
+        }
+        
+        .coordinator-name {
+            font-weight: 600;
+            margin: 0;
+            font-size: 0.95rem;
+        }
+        
+        .coordinator-pronouns {
+            color: #666;
+            font-size: 0.8rem;
+            margin: 2px 0 0 0;
+        }
+        
+        .position-description {
+            font-size: 0.9rem;
+            line-height: 1.5;
+            color: #555;
+            margin-bottom: 15px;
+            flex-grow: 1;
+        }
+        
+        .contact-link {
+            display: block;
+            text-align: center;
+            padding: 8px;
+            background-color: #f5f5f5;
+            color: #333;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            transition: background-color 0.2s;
+            margin-top: auto;
+        }
+        
+        .contact-link:hover {
+            background-color: #e0e0e0;
+        }
+
+        /* Add these more specific selectors to override parent styles */
+        .coordinator-card .position-name {
+        color: white !important;
+        }
+
+        .coordinator-card .coordinator-name {
+        color: #333 !important;
+        }
+
+        .coordinator-card .coordinator-pronouns {
+        color: #666 !important;
+        }
+
+        .coordinator-card .position-description {
+        color: #555 !important;
+        }
+
+        .coordinator-card .contact-link {
+        color: #333 !important;
+        }
+
+        .coordinator-card .contact-link:hover {
+        color: #111 !important;
+        }
+
+        .coordinator-card .vacancy-badge {
+        color: white !important;
+        }
+
+        /* And for the header text */
+        .coordinators-container .coordinators-title,
+        .coordinators-container .coordinators-description {
+        color: inherit !important;
+        }
+        
+        @media (max-width: 768px) {
+            .coordinators-grid {
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="coordinators-container">
+        <div class="coordinators-header">
+            <h2 class="coordinators-title">VOLUNTEER COORDINATORS</h2>
+            <p class="coordinators-description">
+                While the Board of Directors handle the administrative decisions and operations, 
+                we need a large team of volunteer coordinators who help round out the team in specialized areas, 
+                and keep operations and events running smoothly.
+            </p>
+            <p class="coordinators-description">
+                Think you'll be perfect for one of these positions? If you are interested in filling a vacant position, 
+                please reach out to the Board of Directors at 
+                <a href="mailto:Board@ThresholdLA.org">Board@ThresholdLA.org</a> or fill out the volunteer form.
+            </p>
+        </div>
+        
+        <div class="coordinators-grid">
+            <!-- BOOTBLACK COORDINATOR -->
+            <div class="coordinator-card position-filled">
+                <div class="coordinator-header">
+                    <h3 class="position-name">BOOTBLACK COORDINATOR</h3>
+                </div>
+                <div class="coordinator-body">
+                    <div class="coordinator-info">
+                        <div class="coordinator-initial">IN</div>
+                        <div class="coordinator-details">
+                            <p class="coordinator-name">IMPERATRIX NOX</p>
+                            <p class="coordinator-pronouns">Pronouns: she/her</p>
+                        </div>
+                    </div>
+                    <p class="position-description">
+                        Bootblack coordinator is in charge of finding experienced and qualified bootblacks to offer their services at events in an official capacity, in which they can receive tips. They manage setting a shift schedule for bootblacks.
+                    </p>
+                    <a href="mailto:Bootblacks@ThresholdLA.org" class="contact-link">Bootblacks@ThresholdLA.org</a>
+                </div>
+            </div>
+            
+            <!-- CALENDAR COORDINATOR -->
+            <div class="coordinator-card">
+                <div class="coordinator-header">
+                    <h3 class="position-name">CALENDAR COORDINATOR</h3>
+                    <span class="vacancy-badge">Vacant</span>
+                </div>
+                <div class="coordinator-body">
+                    <p class="position-description">
+                        Calendar coordinator manages the public-facing event calendar on the website and in the clubhouse, making sure events and their descriptions are up to date. They also maintain the internal staff calendar.
+                    </p>
+                    <a href="mailto:Calendar@ThresholdLA.org" class="contact-link">Calendar@ThresholdLA.org</a>
+                </div>
+            </div>
+            
+            <!-- DESIGN COORDINATOR -->
+            <div class="coordinator-card">
+                <div class="coordinator-header">
+                    <h3 class="position-name">DESIGN COORDINATOR</h3>
+                    <span class="vacancy-badge">Vacant</span>
+                </div>
+                <div class="coordinator-body">
+                    <p class="position-description">
+                        Design coordinator is the lead of graphic arts aspects of the club: signs posted around the clubhouse, posters for events, social media graphics, and the like. Could also include things like website appearance, logos, fonts, symbols, and the like.
+                    </p>
+                    <a href="mailto:Design@ThresholdLA.org" class="contact-link">Design@ThresholdLA.org</a>
+                </div>
+            </div>
+            
+            <!-- DEI COORDINATOR -->
+            <div class="coordinator-card position-filled">
+                <div class="coordinator-header">
+                    <h3 class="position-name">DEI COORDINATOR</h3>
+                </div>
+                <div class="coordinator-body">
+                    <div class="coordinator-info">
+                        <div class="coordinator-initial">H</div>
+                        <div class="coordinator-details">
+                            <p class="coordinator-name">HERMES</p>
+                            <p class="coordinator-pronouns">Pronouns: they/them</p>
+                        </div>
+                    </div>
+                    <p class="position-description">
+                        DEI coordinator facilitates the discussions and meetings of the DEI (Diversity, Equity, and Inclusion) team, who then sends ideas to the board to make Threshold an inclusive, diverse, equitable, and accessible space!
+                    </p>
+                    <a href="mailto:DEI@ThresholdLA.org" class="contact-link">DEI@ThresholdLA.org</a>
+                </div>
+            </div>
+            
+            <!-- DOORKEEPER COORDINATOR -->
+            <div class="coordinator-card position-filled">
+                <div class="coordinator-header">
+                    <h3 class="position-name">DOORKEEPER COORDINATOR</h3>
+                </div>
+                <div class="coordinator-body">
+                    <div class="coordinator-info">
+                        <div class="coordinator-initial">L</div>
+                        <div class="coordinator-details">
+                            <p class="coordinator-name">LAINEE</p>
+                            <p class="coordinator-pronouns">Pronouns: she/her</p>
+                        </div>
+                    </div>
+                    <p class="position-description">
+                        Doorkeeper coordinator is in charge of finding doorkeepers, training them, and creating shift schedules for them.
+                    </p>
+                    <a href="mailto:Door@ThresholdLA.org" class="contact-link">Door@ThresholdLA.org</a>
+                </div>
+            </div>
+            
+            <!-- DUNGEON MONITOR COORDINATOR -->
+            <div class="coordinator-card position-filled">
+                <div class="coordinator-header">
+                    <h3 class="position-name">DUNGEON MONITOR COORDINATOR</h3>
+                </div>
+                <div class="coordinator-body">
+                    <div class="coordinator-info">
+                        <div class="coordinator-initial">P</div>
+                        <div class="coordinator-details">
+                            <p class="coordinator-name">PO3EAR</p>
+                            <p class="coordinator-pronouns">Pronouns: he/him</p>
+                        </div>
+                    </div>
+                    <p class="position-description">
+                        Dungeon Monitor coordinator is in charge of finding and vetting DMs, training them, and creating shift schedules for them.
+                    </p>
+                    <a href="mailto:DungeonMaster@ThresholdLA.org" class="contact-link">DungeonMaster@ThresholdLA.org</a>
+                </div>
+            </div>
+            
+            <!-- EDUCATION COORDINATOR -->
+            <div class="coordinator-card position-filled">
+                <div class="coordinator-header">
+                    <h3 class="position-name">EDUCATION COORDINATOR</h3>
+                </div>
+                <div class="coordinator-body">
+                    <div class="coordinator-info">
+                        <div class="coordinator-initial">V</div>
+                        <div class="coordinator-details">
+                            <p class="coordinator-name">VIXEN</p>
+                            <p class="coordinator-pronouns">Pronouns: she/her</p>
+                        </div>
+                    </div>
+                    <p class="position-description">
+                        Education coordinator finds instructors for teaching classes at Threshold and working on scheduling such classes, especially those associated with similarly-themed parties.
+                    </p>
+                    <a href="mailto:Education@ThresholdLA.org" class="contact-link">Education@ThresholdLA.org</a>
+                </div>
+            </div>
+            
+            <!-- FACILITIES COORDINATOR -->
+            <div class="coordinator-card position-filled">
+                <div class="coordinator-header">
+                    <h3 class="position-name">FACILITIES COORDINATOR</h3>
+                </div>
+                <div class="coordinator-body">
+                    <div class="coordinator-info">
+                        <div class="coordinator-initial">L</div>
+                        <div class="coordinator-details">
+                            <p class="coordinator-name">LILLET</p>
+                            <p class="coordinator-pronouns">Pronouns: they/them</p>
+                        </div>
+                    </div>
+                    <p class="position-description">
+                        Facilities coordinator is in charge of managing physical aspects of the club, such as furniture maintenance, plumbing, electrical, flooring, and cleanliness.
+                    </p>
+                    <a href="mailto:Facilities@ThresholdLA.org" class="contact-link">Facilities@ThresholdLA.org</a>
+                </div>
+            </div>
+            
+            <!-- FIRST AID/CPR COORDINATOR -->
+            <div class="coordinator-card position-filled">
+                <div class="coordinator-header">
+                    <h3 class="position-name">FIRST AID/CPR COORDINATOR</h3>
+                </div>
+                <div class="coordinator-body">
+                    <div class="coordinator-info">
+                        <div class="coordinator-initial">V</div>
+                        <div class="coordinator-details">
+                            <p class="coordinator-name">VIKING</p>
+                            <p class="coordinator-pronouns">Pronouns: he/him</p>
+                        </div>
+                    </div>
+                    <p class="position-description">
+                        First Aid/CPR coordinator runs first aid trainings for volunteers, primarily dungeon monitors, and checks and maintains first aid equipment throughout the clubhouse.
+                    </p>
+                    <a href="mailto:FirstAid@ThresholdLA.org" class="contact-link">FirstAid@ThresholdLA.org</a>
+                </div>
+            </div>
+            
+            <!-- IT COORDINATOR -->
+            <div class="coordinator-card position-filled">
+                <div class="coordinator-header">
+                    <h3 class="position-name">IT COORDINATOR</h3>
+                </div>
+                <div class="coordinator-body">
+                    <div class="coordinator-info">
+                        <div class="coordinator-initial">ST</div>
+                        <div class="coordinator-details">
+                            <p class="coordinator-name">SILVER TONGUE</p>
+                            <p class="coordinator-pronouns">Pronouns: he/him</p>
+                        </div>
+                    </div>
+                    <p class="position-description">
+                        IT coordinator is in charge of the integration of back-end systems for Threshold.
+                    </p>
+                    <a href="mailto:IT@ThresholdLA.org" class="contact-link">IT@ThresholdLA.org</a>
+                </div>
+            </div>
+            
+            <!-- LIBRARIAN -->
+            <div class="coordinator-card position-filled">
+                <div class="coordinator-header">
+                    <h3 class="position-name">LIBRARIAN</h3>
+                </div>
+                <div class="coordinator-body">
+                    <div class="coordinator-info">
+                        <div class="coordinator-initial">B</div>
+                        <div class="coordinator-details">
+                            <p class="coordinator-name">BEETLE</p>
+                            <p class="coordinator-pronouns">Pronouns: they/them</p>
+                        </div>
+                    </div>
+                    <p class="position-description">
+                        Librarian manages the library of kink books we maintain, upholding kink history for posterity.
+                    </p>
+                    <a href="mailto:Library@ThresholdLA.org" class="contact-link">Library@ThresholdLA.org</a>
+                </div>
+            </div>
+            
+            <!-- MEMBER LIAISON -->
+            <div class="coordinator-card">
+                <div class="coordinator-header">
+                    <h3 class="position-name">MEMBER LIAISON</h3>
+                    <span class="vacancy-badge">Vacant</span>
+                </div>
+                <div class="coordinator-body">
+                    <p class="position-description">
+                        Member liaison helps draft important internal announcements to members for sharing across all member platforms. This includes election notices, bylaw awareness descriptions, polls, etc.
+                    </p>
+                    <a href="mailto:MemberLiaison@ThresholdLA.org" class="contact-link">MemberLiaison@ThresholdLA.org</a>
+                </div>
+            </div>
+            
+            <!-- MEMBERSHIP COORDINATOR -->
+            <div class="coordinator-card position-filled">
+                <div class="coordinator-header">
+                    <h3 class="position-name">MEMBERSHIP COORDINATOR</h3>
+                </div>
+                <div class="coordinator-body">
+                    <div class="coordinator-info">
+                        <div class="coordinator-initial">MM</div>
+                        <div class="coordinator-details">
+                            <p class="coordinator-name">MR.MIKE</p>
+                            <p class="coordinator-pronouns">Pronouns: he/him</p>
+                        </div>
+                    </div>
+                    <p class="position-description">
+                        Membership coordinator manages the member database, maintaining members' secure and private identifying information as well as membership names and numbers. They lead orientations to welcome new members.
+                    </p>
+                    <a href="mailto:membership@thresholdLA.org" class="contact-link">membership@thresholdLA.org</a>
+                </div>
+            </div>
+            
+            <!-- NEWSLETTER EDITOR -->
+            <div class="coordinator-card position-filled">
+                <div class="coordinator-header">
+                    <h3 class="position-name">NEWSLETTER EDITOR</h3>
+                </div>
+                <div class="coordinator-body">
+                    <div class="coordinator-info">
+                        <div class="coordinator-initial">K</div>
+                        <div class="coordinator-details">
+                            <p class="coordinator-name">KITT</p>
+                            <p class="coordinator-pronouns">Pronouns: they/them</p>
+                        </div>
+                    </div>
+                    <p class="position-description">
+                        Manage and oversee the content produced for publications or websites. This includes reviewing all content produced, such as articles and photographs, developing strategies and style guidelines, and representing the brand at social events throughout the year.
+                    </p>
+                    <a href="mailto:Submissions@ThresholdLA.org" class="contact-link">Submissions@ThresholdLA.org</a>
+                </div>
+            </div>
+            
+            <!-- OUTREACH LIAISON -->
+            <div class="coordinator-card">
+                <div class="coordinator-header">
+                    <h3 class="position-name">OUTREACH LIAISON</h3>
+                    <span class="vacancy-badge">Vacant</span>
+                </div>
+                <div class="coordinator-body">
+                    <p class="position-description">
+                        Outreach liaison works on fostering partnerships with other organizations in the kink world and beyond. They would work with the education, party host, and vendor coordinators in lots of cases.
+                    </p>
+                    <a href="mailto:Outreach@ThresholdLA.org" class="contact-link">Outreach@ThresholdLA.org</a>
+                </div>
+            </div>
+            
+            <!-- PARTY HOST COORDINATOR -->
+            <div class="coordinator-card position-filled">
+                <div class="coordinator-header">
+                    <h3 class="position-name">PARTY HOST COORDINATOR</h3>
+                </div>
+                <div class="coordinator-body">
+                    <div class="coordinator-info">
+                        <div class="coordinator-initial">M</div>
+                        <div class="coordinator-details">
+                            <p class="coordinator-name">MICHI</p>
+                            <p class="coordinator-pronouns">Pronouns: she/her</p>
+                        </div>
+                    </div>
+                    <p class="position-description">
+                        Party host coordinator manages the party hosts for all of the parties of Threshold, including scheduling parties, gathering requests for new party themes from the community, and training new party hosts.
+                    </p>
+                    <a href="mailto:HostCoordinator@ThresholdLA.org" class="contact-link">HostCoordinator@ThresholdLA.org</a>
+                </div>
+            </div>
+            
+            <!-- PUBLICITY COORDINATOR -->
+            <div class="coordinator-card">
+                <div class="coordinator-header">
+                    <h3 class="position-name">PUBLICITY COORDINATOR</h3>
+                    <span class="vacancy-badge">Vacant</span>
+                </div>
+                <div class="coordinator-body">
+                    <p class="position-description">
+                        Publicity coordinator works in conjunction with the board and social media managers to create and implement promotional content. This entails drafting event notifications and posting them regularly.
+                    </p>
+                    <a href="mailto:Publicity@ThresholdLA.org" class="contact-link">Publicity@ThresholdLA.org</a>
+                </div>
+            </div>
+            
+            <!-- RESTORATIVE JUSTICE COORDINATOR -->
+            <div class="coordinator-card">
+                <div class="coordinator-header">
+                    <h3 class="position-name">RESTORATIVE JUSTICE COORDINATOR</h3>
+                    <span class="vacancy-badge">Vacant</span>
+                </div>
+                <div class="coordinator-body">
+                    <p class="position-description">
+                        Coordinates restorative justice processes within the community.
+                    </p>
+                    <a href="mailto:RJ@ThresholdLA.org" class="contact-link">RJ@ThresholdLA.org</a>
+                </div>
+            </div>
+            
+            <!-- SERGEANT AT ARMS -->
+            <div class="coordinator-card position-filled">
+                <div class="coordinator-header">
+                    <h3 class="position-name">SERGEANT AT ARMS</h3>
+                </div>
+                <div class="coordinator-body">
+                    <div class="coordinator-info">
+                        <div class="coordinator-initial">LS</div>
+                        <div class="coordinator-details">
+                            <p class="coordinator-name">LADY SOLARIS</p>
+                            <p class="coordinator-pronouns">Pronouns: she/her</p>
+                        </div>
+                    </div>
+                    <p class="position-description">
+                        Sergeant at arms enforces Robert's Rules of Order at all monthly Meetings of Members to ensure a smooth flow of proceedings while granting members space to voice their thoughts.
+                    </p>
+                    <a href="mailto:SergeantAtArms@ThresholdLA.org" class="contact-link">SergeantAtArms@ThresholdLA.org</a>
+                </div>
+            </div>
+            
+            <!-- VENDOR COORDINATOR -->
+            <div class="coordinator-card position-filled">
+                <div class="coordinator-header">
+                    <h3 class="position-name">VENDOR COORDINATOR</h3>
+                </div>
+                <div class="coordinator-body">
+                    <div class="coordinator-info">
+                        <div class="coordinator-initial">V</div>
+                        <div class="coordinator-details">
+                            <p class="coordinator-name">VIXEN</p>
+                            <p class="coordinator-pronouns">Pronouns: she/her</p>
+                        </div>
+                    </div>
+                    <p class="position-description">
+                        Vendor coordinator is in charge of reaching out to vendors for selling at certain events, matching communities to the makers of their favorite toys and gear.
+                    </p>
+                    <a href="mailto:Vendors@ThresholdLA.org" class="contact-link">Vendors@ThresholdLA.org</a>
+                </div>
+            </div>
+            
+            <!-- VOLUNTEER COORDINATOR -->
+            <div class="coordinator-card position-filled">
+                <div class="coordinator-header">
+                    <h3 class="position-name">VOLUNTEER COORDINATOR</h3>
+                </div>
+                <div class="coordinator-body">
+                    <div class="coordinator-info">
+                        <div class="coordinator-initial">CJ</div>
+                        <div class="coordinator-details">
+                            <p class="coordinator-name">CLIFF JUMP</p>
+                            <p class="coordinator-pronouns">Pronouns: he/him</p>
+                        </div>
+                    </div>
+                    <p class="position-description">
+                        Volunteer coordinator is mainly responsible for recruiting and managing volunteers for our organization. In addition, they delegate responsibilities to volunteers and are responsible for training selected people.
+                    </p>
+                    <a href="mailto:Volunteers@ThresholdLA.org" class="contact-link">Volunteers@ThresholdLA.org</a>
+                </div>
+            </div>
+            
+            <!-- WEBMASTER -->
+            <div class="coordinator-card position-filled">
+                <div class="coordinator-header">
+                    <h3 class="position-name">WEBMASTER</h3>
+                </div>
+                <div class="coordinator-body">
+                    <div class="coordinator-info">
+                        <div class="coordinator-initial">ST</div>
+                        <div class="coordinator-details">
+                            <p class="coordinator-name">SILVER TONGUE</p>
+                            <p class="coordinator-pronouns">Pronouns: he/him</p>
+                        </div>
+                    </div>
+                    <p class="position-description">
+                        Webmaster manages web pages, sites and applications. They coordinate the design, development, deployment and maintenance of a company's online presence.
+                    </p>
+                    <a href="mailto:Webmaster@ThresholdLA.org" class="contact-link">Webmaster@ThresholdLA.org</a>
+                </div>
+            </div>
+            
+            <!-- ACCESSIBILITY COORDINATOR -->
+            <div class="coordinator-card position-filled">
+                <div class="coordinator-header">
+                    <h3 class="position-name">ACCESSIBILITY COORDINATOR</h3>
+                </div>
+                <div class="coordinator-body">
+                    <div class="coordinator-info">
+                        <div class="coordinator-initial">R</div>
+                        <div class="coordinator-details">
+                            <p class="coordinator-name">ROCK</p>
+                            <p class="coordinator-pronouns">Pronouns: they/them</p>
+                        </div>
+                    </div>
+                    <p class="position-description">
+                        Ensures Threshold events and spaces are accessible to all community members.
+                    </p>
+                    <a href="mailto:Accessibility@ThresholdLA.org" class="contact-link">Accessibility@ThresholdLA.org</a>
+                </div>
+            </div>
+            
+            <!-- DISCORD ADMIN -->
+            <div class="coordinator-card position-filled">
+                <div class="coordinator-header">
+                    <h3 class="position-name">DISCORD ADMIN</h3>
+                </div>
+                <div class="coordinator-body">
+                    <div class="coordinator-info">
+                        <div class="coordinator-initial">LML</div>
+                        <div class="coordinator-details">
+                            <p class="coordinator-name">LITTLE MISS LIV</p>
+                            <p class="coordinator-pronouns">Pronouns: she/her</p>
+                        </div>
+                    </div>
+                    <p class="position-description">
+                        The Discord Administrator is responsible for the overall management of the Threshold Discord server including functioning as the lead moderator, managing discord back-end services.
+                    </p>
+                    <a href="mailto:Discord@ThresholdLA.org" class="contact-link">Discord@ThresholdLA.org</a>
+                </div>
+            </div>
+            
+            <!-- COMMUNICATIONS COORDINATOR -->
+            <div class="coordinator-card position-filled">
+                <div class="coordinator-header">
+                    <h3 class="position-name">COMMUNICATIONS COORDINATOR</h3>
+                </div>
+                <div class="coordinator-body">
+                    <div class="coordinator-info">
+                        <div class="coordinator-initial">E</div>
+                        <div class="coordinator-details">
+                            <p class="coordinator-name">EILA</p>
+                            <p class="coordinator-pronouns">Pronouns: she/her</p>
+                        </div>
+                    </div>
+                    <p class="position-description">
+                        Oversees Threshold's communication to members and the general public. Coordinates Threshold's official messaging through social media, newsletter, calendar, design, publicity and community outreach.
+                    </p>
+                    <a href="mailto:Communications@ThresholdLA.org" class="contact-link">Communications@ThresholdLA.org</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
